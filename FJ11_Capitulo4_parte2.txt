@@ -1,0 +1,85 @@
+/* Fixando conhecimento */
+// programa 1
+class Pessoa {
+    String nome;
+    int idade;
+    void fazAniversario(){
+        this.idade++;
+        System.out.println("Parabens "+this.nome);
+    }
+    void mostra(){
+        System.out.println("Nome="+this.nome);
+        System.out.println("Idade="+this.idade);
+    }
+}
+
+public class FJ11_Capitulo4p2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Pessoa p = new Pessoa();
+        p.nome= "Artur";
+        p.idade= 20;
+        p.mostra();
+        p.fazAniversario();
+        p.fazAniversario();
+        p.mostra();
+    }
+    
+}
+// progrma 2 
+class Porta {
+    boolean aberta= true;
+    String cor="Branca";
+    int dimX=180, dimY=60, dimZ=5;
+    
+    void abre(){
+        this.aberta= true;
+    }
+    void fecha(){
+        this.aberta= false;
+    }
+    void pinta(String c){
+        this.cor= c;
+    }
+    boolean estaAberta(){
+        if (this.aberta)
+            return true;
+        else
+            return false;
+
+    }
+    void mostra (){
+        System.out.println("cor="+this.cor);
+        System.out.println("dimensoes="+this.dimX+"x"+dimY+"x"+dimZ);
+        if (this.aberta)
+        { System.out.println("aberta!");}
+        else
+        { System.out.println("fechado!");};
+    }
+}
+
+public class FJ11_Capitulo4p2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // prgrama 2 - exercicio da porta
+        Porta p = new Porta();
+        p.mostra();
+        p.fecha();
+        p.mostra();
+        p.cor="preta"; p.dimX=170; p.dimY=75; p.dimZ=4; 
+        p.mostra();
+        p.cor="preta"; p.dimX=190; p.dimY=85; p.dimZ=6; 
+        p.mostra(); p.abre();
+        p.mostra();
+    }
+    
+}
+
+// programa 3
